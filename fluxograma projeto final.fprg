@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dev_1o_Ano"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-01 11:35:02 "/>
+        <attribute name="created" value="RGV2XzFvX0FubztETlMxMTgxMjYwNzk5OzIwMjYtMDYtMDE7IjA5OjAzOjAxICI7Mjg2MQ=="/>
+        <attribute name="edited" value="RGV2XzFvX0FubztETlMxMTgxMjYwNzk5OzIwMjYtMDYtMDE7IjExOjM1OjAyICI7MTsyOTY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="botao" type="String" array="False" size=""/>
+            <output expression="&quot;Sem&#225;foro dos carros est&#225; aberto&quot;" newline="True"/>
+            <output expression="&quot;Sem&#225;foro dos pedestres est&#225; fechado&quot;" newline="True"/>
+            <output expression="&quot;O bot&#227;o para travessia dos pedestres foi pressionado? (Responder apenas 'sim' ou 'n&#227;o')&quot;" newline="True"/>
+            <input variable="botao"/>
+            <comment text="Caso seja sim"/>
+            <if expression="botao = &quot;sim&quot;">
+                <then>
+                    <output expression="&quot;Sem&#225;foro dos carros fica amarelo, logo ap&#243;s alguns instantes fecha&quot;" newline="True"/>
+                    <output expression="&quot;Sem&#225;foro dos pedestres fica aberto&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="Caso seja n&#227;o"/>
+                    <if expression="botao != &quot;n&#227;o&quot;">
+                        <then>
+                            <comment text="Se for diferente de sim ou n&#227;o"/>
+                            <while expression="botao != &quot;sim&quot; &amp;&amp; botao != &quot;n&#227;o&quot;">
+                                <comment text="Loop para que o erro seja corrigido"/>
+                                <output expression="&quot;Por favor, escreva um valor v&#225;lido. Sem&#225;foros sem altera&#231;&#245;es&quot;" newline="True"/>
+                                <input variable="botao"/>
+                            </while>
+                            <if expression="botao = &quot;sim&quot;">
+                                <then>
+                                    <comment text="Se p&#243;s o erro for sim"/>
+                                    <output expression="&quot;Sem&#225;foro dos carros fica amarelo, logo ap&#243;s alguns instantes fecha&quot;" newline="True"/>
+                                    <output expression="&quot;Sem&#225;foro dos pedestres fica aberto&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <comment text="Se p&#243;s o erro for n&#227;o"/>
+                                    <while expression="botao = &quot;n&#227;o&quot;">
+                                        <comment text="Loop para alcan&#231;ar o sim"/>
+                                        <output expression="&quot;Os sem&#225;foros n&#227;o sofrem altera&#231;&#245;es&quot;" newline="True"/>
+                                        <output expression="&quot;O bot&#227;o dos pedestres foi pressionado? (Responder apenas 'sim' ou 'n&#227;o')&quot;" newline="True"/>
+                                        <input variable="botao"/>
+                                    </while>
+                                    <if expression="botao = &quot;sim&quot;">
+                                        <then>
+                                            <comment text="Caso tenha alcan&#231;ado o sim"/>
+                                            <output expression="&quot;Sem&#225;foro dos carros fica amarelo, logo ap&#243;s alguns instantes fecha&quot;" newline="True"/>
+                                            <output expression="&quot;Sem&#225;foro dos pedestres fica aberto&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <comment text="Se errar o que deveria estar escrito"/>
+                                            <while expression="botao != &quot;sim&quot;">
+                                                <output expression="&quot;Por favor, escreva um valor v&#225;lido. Sem&#225;foros sem altera&#231;&#245;es&quot;" newline="True"/>
+                                                <input variable="botao"/>
+                                            </while>
+                                            <comment text="Alcan&#231;ou o sim"/>
+                                            <output expression="&quot;Sem&#225;foro dos carros fica amarelo, logo ap&#243;s alguns instantes fecha&quot;" newline="True"/>
+                                            <output expression="&quot;Sem&#225;foro dos pedestres fica aberto&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <while expression="botao = &quot;n&#227;o&quot;">
+                                <comment text="Loop para alcan&#231;ar o sim"/>
+                                <output expression="&quot;Os sem&#225;foros n&#227;o sofrem altera&#231;&#245;es&quot;" newline="True"/>
+                                <output expression="&quot;O bot&#227;o dos pedestres foi pressionado? (Responder apenas 'sim' ou 'n&#227;o')&quot;" newline="True"/>
+                                <input variable="botao"/>
+                            </while>
+                            <if expression="botao = &quot;sim&quot;">
+                                <then>
+                                    <comment text="Se p&#243;s o n&#227;o for sim"/>
+                                    <output expression="&quot;Sem&#225;foro dos carros fica amarelo, logo ap&#243;s alguns instantes fecha&quot;" newline="True"/>
+                                    <output expression="&quot;Sem&#225;foro dos pedestres fica aberto&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <while expression="botao != &quot;sim&quot;">
+                                        <comment text="Se errar p&#243;s o n&#227;o"/>
+                                        <output expression="&quot;Por favor, escreva um valor v&#225;lido. Sem&#225;foros sem altera&#231;&#245;es&quot;" newline="True"/>
+                                        <input variable="botao"/>
+                                    </while>
+                                    <output expression="&quot;Sem&#225;foro dos carros fica amarelo, logo ap&#243;s alguns instantes fecha&quot;" newline="True"/>
+                                    <output expression="&quot;Sem&#225;foro dos pedestres fica aberto&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
