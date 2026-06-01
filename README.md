@@ -36,11 +36,11 @@ O repositório está organizado com os seguintes arquivos essenciais para o ente
 
 | Etapa do Algoritmo | Descrição Lógica |
 | :--- | :--- |
-| 🎬 **Estado Inicial** | O sinal dos carros inicia aberto (Verde) e o de pedestres fechado (Vermelho)[cite: 2, 3]. |
-| 📖 **Leitura do Botão** | O programa entra em prontidão esperando o input `"sim"` ou `"não"` do usuário[cite: 4, 5]. |
-| ✅ **Transição (Sim)** | O sinal dos carros muda para Amarelo, depois Vermelho, e libera o Verde dos pedestres[cite: 6, 7]. |
-| ❌ **Transição (Não)** | Nenhuma mudança é acionada; o sistema mantém o estado inicial seguro[cite: 16, 30, 31]. |
-| ⚠️ **Tratamento de Erros** | Loops de repetição (`while`) barram respostas inválidas até que o input correto seja digitado[cite: 8, 9, 10]. |
+| 🎬 **Estado Inicial** | O sinal dos carros inicia aberto (Verde) e o de pedestres fechado (Vermelho). |
+| 📖 **Leitura do Botão** | O programa entra em prontidão esperando o input `"sim"` ou `"não"` do usuário. |
+| ✅ **Transição (Sim)** | O sinal dos carros muda para Amarelo, depois Vermelho, e libera o Verde dos pedestres. |
+| ❌ **Transição (Não)** | Nenhuma mudança é acionada; o sistema mantém o estado inicial seguro. |
+| ⚠️ **Tratamento de Erros** | Loops de repetição (`while`) barram respostas inválidas até que o input correto seja digitado. |
 
 ---
 **👥 Integrantes do grupo**
